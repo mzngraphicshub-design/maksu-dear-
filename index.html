@@ -1,1 +1,1095 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Makshu ❤️ | 15 October</title>
+
+<meta name="description"
+content="A special birthday surprise made with love for Makshu — 15 October ❤️">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#08000d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,0,110,.15),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(155,0,255,.15),transparent 30%);
+    pointer-events:none;
+    z-index:-2;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#08000d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:99999;
+    transition:1s;
+}
+
+.loader. hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-heart{
+    font-size:65px;
+    animation:heartbeat 1s infinite;
+}
+
+.loader p{
+    margin-top:15px;
+    color:#ff7ab8;
+    letter-spacing:3px;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.3)}
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    animation:floatUp linear infinite;
+    opacity:.7;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    10%{opacity:.8}
+    90%{opacity:.8}
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+    z-index:5;
+}
+
+.small-title{
+    color:#ff79b7;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(65px,12vw,140px);
+    line-height:.9;
+    background:linear-gradient(90deg,#fff,#ff83bc,#dca0ff,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    background-size:300%;
+    animation:gradient 5s infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0%}
+    50%{background-position:100%}
+    100%{background-position:0%}
+}
+
+.hero h2{
+    margin-top:25px;
+    font-size:clamp(20px,4vw,35px);
+    font-weight:400;
+}
+
+.hero h2 span{
+    color:#ff6faf;
+}
+
+.date{
+    margin:25px auto;
+    display:inline-block;
+    padding:12px 25px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    font-size:12px;
+    letter-spacing:3px;
+    color:#aaa;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#ff6faf;
+}
+
+.section-title h2{
+    font-family:'Dancing Script',cursive;
+    font-size:55px;
+}
+
+.section-title p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-card{
+    padding:45px;
+    border-radius:30px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+    text-align:center;
+}
+
+.message-card .big-heart{
+    font-size:60px;
+    animation:heartbeat 1.4s infinite;
+}
+
+.message-card h3{
+    font-family:'Dancing Script',cursive;
+    font-size:42px;
+    margin:20px 0;
+    color:#ff8abd;
+}
+
+.message-card p{
+    line-height:2;
+    color:#ddd;
+    font-size:16px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+.time-box{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:25px 10px;
+    text-align:center;
+}
+
+.time-box strong{
+    display:block;
+    font-size:40px;
+    color:#ff79b7;
+}
+
+.time-box span{
+    color:#aaa;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter{
+    max-width:750px;
+    margin:auto;
+    padding:45px;
+    background:#fff8fc;
+    color:#301321;
+    border-radius:8px;
+    position:relative;
+    box-shadow:0 30px 80px rgba(255,0,110,.15);
+    transform:rotate(-1deg);
+}
+
+.letter::before{
+    content:"💌";
+    position:absolute;
+    top:-35px;
+    right:30px;
+    font-size:65px;
+}
+
+.letter h3{
+    font-family:'Dancing Script',cursive;
+    font-size:42px;
+    margin-bottom:25px;
+    color:#d62d70;
+}
+
+.letter p{
+    line-height:2;
+    margin-bottom:18px;
+}
+
+.signature{
+    font-family:'Dancing Script',cursive;
+    font-size:32px;
+    text-align:right;
+    color:#d62d70;
+}
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise{
+    text-align:center;
+}
+
+.gift{
+    font-size:110px;
+    cursor:pointer;
+    display:inline-block;
+    transition:.4s;
+    filter:drop-shadow(0 0 20px rgba(255,0,110,.3));
+}
+
+.gift:hover{
+    transform:scale(1.15) rotate(8deg);
+}
+
+.surprise-text{
+    max-width:600px;
+    margin:30px auto 0;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    display:none;
+}
+
+.surprise-text.show{
+    display:block;
+    animation:pop .7s ease;
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.surprise-text h3{
+    font-family:'Dancing Script',cursive;
+    font-size:40px;
+    color:#ff79b7;
+    margin-bottom:15px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.final h2{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(55px,10vw,110px);
+    color:#ff79b7;
+}
+
+.final p{
+    max-width:600px;
+    margin:20px auto;
+    color:#bbb;
+    line-height:1.8;
+}
+
+.final-heart{
+    font-size:70px;
+    animation:heartbeat 1.2s infinite;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.1);
+    color:white;
+    cursor:pointer;
+    backdrop-filter:blur(10px);
+    z-index:100;
+    font-size:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+}
+
+footer span{
+    color:#ff6faf;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:650px){
+
+    section{
+        padding:75px 15px;
+    }
+
+    .countdown{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .time-box strong{
+        font-size:32px;
+    }
+
+    .message-card,
+    .letter{
+        padding:28px 20px;
+    }
+
+    .letter{
+        transform:none;
+    }
+
+    .hero h1{
+        font-size:75px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-heart">❤️</div>
+    <p>Preparing a little surprise...</p>
+</div>
+
+<!-- FLOATING HEARTS -->
+<div class="hearts" id="hearts"></div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <!-- নিজের গান দিতে চাইলে নিচের src-এ mp3 file বসাও -->
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn">🎵</button>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            A little surprise made with love
+        </div>
+
+        <h1>Makshu</h1>
+
+        <h2>
+            Someone very special was born on
+            <span>15 October</span> ❤️
+        </h2>
+
+        <div class="date">
+            🎂 15 • October • Birthday Girl 🎂
+        </div>
+
+        <p style="color:#999;">
+            This page is not just a website...<br>
+            it's a little piece of my heart.
+        </p>
+
+    </div>
+
+    <div class="scroll">
+        ↓ SCROLL SLOWLY ↓
+    </div>
+
+</header>
+
+
+<!-- =========================
+     BIRTHDAY MESSAGE
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-title">
+        <p>For the most special person</p>
+        <h2>Happy Birthday <span>Makshu</span> ❤️</h2>
+    </div>
+
+    <div class="message-card">
+
+        <div class="big-heart">❤️</div>
+
+        <h3>Today is your day...</h3>
+
+        <p>
+            পৃথিবীতে অনেক মানুষ আসে, অনেক মানুষ চলে যায়।
+            কিন্তু কিছু মানুষ থাকে, যারা অজান্তেই আমাদের
+            পৃথিবীটাকে একটু বেশি সুন্দর করে দেয়।
+        </p>
+
+        <br>
+
+        <p>
+            আর তুমি ঠিক তেমনই একজন, Makshu. ❤️
+            তোমার হাসিটা যেন সব খারাপ দিনকে ভালো করে দেওয়ার
+            একটা ছোট্ট জাদু।
+        </p>
+
+        <br>
+
+        <p>
+            তাই আজকের এই বিশেষ দিনে শুধু একটা কথাই বলতে চাই—
+            <b>তুমি সবসময় এমনই সুন্দর থেকো, হাসিখুশি থেকো
+            আর তোমার সব স্বপ্ন পূরণ হোক।</b>
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-title">
+        <p>The special moment</p>
+        <h2>Counting Down To <span>Your Day</span> 🎂</h2>
+    </div>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <strong id="days">00</strong>
+            <span>Days</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-title">
+        <p>A letter written specially for you</p>
+        <h2>Dear <span>Makshu</span> 💌</h2>
+    </div>
+
+    <div class="letter">
+
+        <h3>My little birthday note...</h3>
+
+        <p>
+            Dear Makshu,
+        </p>
+
+        <p>
+            জানি না এই ছোট্ট website টা দেখে তুমি কতটা অবাক হবে,
+            কিন্তু একটা জিনিস জানি—এটা বানানোর প্রতিটা মুহূর্তে
+            তোমার কথাই মনে হয়েছে।
+        </p>
+
+        <p>
+            Birthday তো প্রতি বছরই আসে। কিন্তু কিছু birthday
+            একটু বেশি special হয়, কারণ সেই দিনটাতে
+            <b>তোমার মতো একজন মানুষ পৃথিবীতে এসেছিল।</b>
+        </p>
+
+        <p>
+            আমি চাই তোমার জীবনের প্রতিটা সকাল হোক হাসিতে ভরা,
+            প্রতিটা রাত হোক শান্তিতে ভরা,
+            আর প্রতিটা স্বপ্ন একদিন সত্যি হয়ে যাক।
+        </p>
+
+        <p>
+            আর যদি কোনোদিন মন খারাপ হয়,
+            মনে রেখো—এই পৃথিবীতে কোথাও একজন মানুষ আছে
+            যে তোমার হাসিটাকে খুব মূল্যবান মনে করে। ❤️
+        </p>
+
+        <p>
+            Happy Birthday, Makshu.
+            তুমি সত্যিই অনেক special. 🌸
+        </p>
+
+        <div class="signature">
+            With lots of love ❤️
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SURPRISE GIFT
+========================= -->
+
+<section>
+
+<div class="container surprise">
+
+    <div class="section-title">
+        <p>One last little surprise...</p>
+        <h2>Open Your <span>Gift</span> 🎁</h2>
+    </div>
+
+    <div class="gift" id="gift">
+        🎁
+    </div>
+
+    <div class="surprise-text" id="surpriseText">
+
+        <h3>Surprise! ❤️</h3>
+
+        <p>
+            তোমার জন্য পৃথিবীর সব happiness চাইলে
+            হয়তো একটা gift box-এ ধরে রাখা যেত না...
+        </p>
+
+        <br>
+
+        <p>
+            তাই gift-এর ভেতরে কিছু রাখিনি।
+            শুধু একটা wish রেখেছি—
+        </p>
+
+        <br>
+
+        <h3 style="font-size:30px;">
+            "May you always have a reason to smile." 🌸
+        </h3>
+
+        <p>
+            আর হ্যাঁ...
+            আজকে একটু বেশি হাসবে কিন্তু! 😌❤️
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+<div>
+
+    <div class="final-heart">❤️</div>
+
+    <h2>Happy Birthday<br>Makshu</h2>
+
+    <p>
+        15 October isn't just another date anymore...
+        It's the day someone incredibly special
+        came into this world.
+    </p>
+
+    <p style="color:#ff79b7;">
+        Stay beautiful. Stay happy. Stay you. ❤️
+    </p>
+
+</div>
+
+</section>
+
+
+<footer>
+    Made with <span>❤️</span> specially for Makshu
+    <br>
+    15 October 🎂
+</footer>
+
+
+<script>
+
+/* =========================
+   LOADER
+========================= */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document.getElementById("loader")
+        .classList.add("hide");
+
+    },1800);
+
+});
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+const heartsContainer =
+document.getElementById("hearts");
+
+const heartSymbols = [
+    "❤️","💗","💕","💖","💘","💓","🌸","✨"
+];
+
+function createHeart(){
+
+    const heart =
+    document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML =
+    heartSymbols[
+        Math.floor(
+            Math.random()*heartSymbols.length
+        )
+    ];
+
+    heart.style.left =
+    Math.random()*100+"%";
+
+    heart.style.fontSize =
+    (12+Math.random()*25)+"px";
+
+    heart.style.animationDuration =
+    (6+Math.random()*8)+"s";
+
+    heart.style.animationDelay =
+    Math.random()*5+"s";
+
+    heartsContainer.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },15000);
+}
+
+setInterval(createHeart,500);
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+function getNextBirthday(){
+
+    const now = new Date();
+
+    let year = now.getFullYear();
+
+    let birthday =
+    new Date(year,9,15,0,0,0);
+
+    if(now > birthday){
+
+        birthday =
+        new Date(year+1,9,15,0,0,0);
+
+    }
+
+    return birthday;
+}
+
+function updateCountdown(){
+
+    const now = new Date();
+
+    const birthday = getNextBirthday();
+
+    const difference =
+    birthday - now;
+
+    const days =
+    Math.floor(
+        difference/(1000*60*60*24)
+    );
+
+    const hours =
+    Math.floor(
+        difference/(1000*60*60)%24
+    );
+
+    const minutes =
+    Math.floor(
+        difference/(1000*60)%60
+    );
+
+    const seconds =
+    Math.floor(
+        difference/1000%60
+    );
+
+    document.getElementById("days")
+    .innerText =
+    String(days).padStart(2,"0");
+
+    document.getElementById("hours")
+    .innerText =
+    String(hours).padStart(2,"0");
+
+    document.getElementById("minutes")
+    .innerText =
+    String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds")
+    .innerText =
+    String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* =========================
+   SURPRISE GIFT
+========================= */
+
+const gift =
+document.getElementById("gift");
+
+const surprise =
+document.getElementById("surpriseText");
+
+gift.addEventListener("click",()=>{
+
+    surprise.classList.toggle("show");
+
+    createConfetti();
+
+});
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    for(let i=0;i<80;i++){
+
+        const confetti =
+        document.createElement("div");
+
+        confetti.style.position="fixed";
+        confetti.style.left="50%";
+        confetti.style.top="50%";
+        confetti.style.width="8px";
+        confetti.style.height="8px";
+        confetti.style.borderRadius="50%";
+        confetti.style.background=
+        "hsl("+
+        Math.random()*360+
+        ",100%,70%)";
+
+        confetti.style.zIndex="9999";
+
+        document.body.appendChild(confetti);
+
+        const angle =
+        Math.random()*Math.PI*2;
+
+        const distance =
+        100+Math.random()*400;
+
+        const x =
+        Math.cos(angle)*distance;
+
+        const y =
+        Math.sin(angle)*distance;
+
+        confetti.animate(
+        [
+            {
+                transform:"translate(0,0)",
+                opacity:1
+            },
+            {
+                transform:
+                `translate(${x}px,${y}px) rotate(720deg)`,
+                opacity:0
+            }
+        ],
+        {
+            duration:
+            1000+Math.random()*1500,
+            easing:"cubic-bezier(.2,.8,.3,1)"
+        });
+
+        setTimeout(()=>{
+            confetti.remove();
+        },2500);
+    }
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const music =
+document.getElementById("music");
+
+const musicBtn =
+document.getElementById("musicBtn");
+
+let playing=false;
+
+musicBtn.addEventListener("click",()=>{
+
+    if(!playing){
+
+        music.play()
+        .then(()=>{
+
+            playing=true;
+            musicBtn.innerHTML="🔊";
+
+        })
+        .catch(()=>{
+
+            alert(
+            "Music চালানোর জন্য birthday.mp3 ফাইলটি index.html-এর পাশে রাখো ❤️"
+            );
+
+        });
+
+    }else{
+
+        music.pause();
+
+        playing=false;
+
+        musicBtn.innerHTML="🎵";
+
+    }
+
+});
+
+
+/* =========================
+   CLICK HEART EFFECT
+========================= */
+
+document.addEventListener("click",(e)=>{
+
+    if(
+        e.target.id==="gift" ||
+        e.target.classList.contains("music-btn")
+    ) return;
+
+    const heart =
+    document.createElement("div");
+
+    heart.innerHTML="❤️";
+
+    heart.style.position="fixed";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    heart.style.pointerEvents="none";
+    heart.style.fontSize="22px";
+    heart.style.zIndex="9999";
+
+    document.body.appendChild(heart);
+
+    heart.animate(
+    [
+        {
+            transform:"translate(-50%,-50%) scale(.5)",
+            opacity:1
+        },
+        {
+            transform:
+            "translate(-50%,-150px) scale(1.5)",
+            opacity:0
+        }
+    ],
+    {
+        duration:900,
+        easing:"ease-out"
+    });
+
+    setTimeout(()=>{
+        heart.remove();
+    },900);
+
+});
+
+</script>
+
+</body>
+</html>
+```
 
